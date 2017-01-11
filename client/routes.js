@@ -1,6 +1,7 @@
 /* eslint-disable global-require */
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
+// 基础组件
 import App from './modules/App/App';
 
 // require.ensure polyfill for node
@@ -16,6 +17,7 @@ if (typeof require.ensure !== 'function') {
  */
 if (process.env.NODE_ENV !== 'production') {
   // Require async routes only in development for react-hot-reloader to work.
+  // 配置开发环境中routes异步
   require('./modules/Post/pages/PostListPage/PostListPage');
   require('./modules/Post/pages/PostDetailPage/PostDetailPage');
 }

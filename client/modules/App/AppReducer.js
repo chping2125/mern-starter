@@ -1,7 +1,9 @@
 // Import Actions
+// 该模块对应的 Actions 导入
 import { TOGGLE_ADD_POST } from './AppActions';
 
 // Initial State
+// 初始化状态 state
 const initialState = {
   showAddPost: false,
 };

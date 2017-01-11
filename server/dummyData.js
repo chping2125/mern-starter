@@ -34,6 +34,7 @@ export default function () {
       qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem
       ipsum quia dolor sit amet.`;
 
+    // 根据 Schema 生成 Entity
     const post1 = new Post({ name: 'Admin', title: 'Hello MERN', slug: 'hello-mern', cuid: 'cikqgkv4q01ck7453ualdn3hd', content: content1 });
     const post2 = new Post({ name: 'Admin', title: 'Lorem Ipsum', slug: 'lorem-ipsum', cuid: 'cikqgkv4q01ck7453ualdn3hf', content: content2 });
 

@@ -1,3 +1,4 @@
+// 语言设置
 import { enabledLanguages, localizationData } from '../../../Intl/setup';
 import { SWITCH_LANGUAGE } from './IntlActions';
 

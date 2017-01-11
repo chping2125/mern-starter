@@ -2,9 +2,11 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 
 // Import Style
+// 引入样式文件
 import styles from './App.css';
 
 // Import Components
+// 引入组件
 import Helmet from 'react-helmet';
 import DevTools from './components/DevTools';
 import Header from './components/Header/Header';

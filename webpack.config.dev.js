@@ -59,12 +59,15 @@ module.exports = {
   },
 
   plugins: [
+    // 热启动
     new webpack.HotModuleReplacementPlugin(),
+    // commomsChunkPlugin 处理公共模块
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
       minChunks: Infinity,
       filename: 'vendor.js',
     }),
+    // 全局变量
     new webpack.DefinePlugin({
       'process.env': {
         CLIENT: JSON.stringify(true),
@@ -72,7 +75,7 @@ module.exports = {
       }
     }),
   ],
-
+  // postcss 配置，官网链接：http://postcss.org/
   postcss: () => [
     postcssFocus(),
     cssnext({

@@ -1,6 +1,6 @@
 import Post from '../models/post';
-import cuid from 'cuid';
-import slug from 'limax';
+import cuid from 'cuid'; // https://www.npmjs.com/package/cuid
+import slug from 'limax'; //url编码生成   https://www.npmjs.com/package/limax
 import sanitizeHtml from 'sanitize-html';
 
 /**
@@ -10,6 +10,7 @@ import sanitizeHtml from 'sanitize-html';
  * @returns void
  */
 export function getPosts(req, res) {
+  // 通过 model 查询出mongoose里面的数据，并按dateAdded字段进行排序
   Post.find().sort('-dateAdded').exec((err, posts) => {
     if (err) {
       res.status(500).send(err);
@@ -38,6 +39,7 @@ export function addPost(req, res) {
 
   newPost.slug = slug(newPost.title.toLowerCase(), { lowercase: true });
   newPost.cuid = cuid();
+  // 向数据库里面添加数据
   newPost.save((err, saved) => {
     if (err) {
       res.status(500).send(err);

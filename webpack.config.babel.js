@@ -1,6 +1,7 @@
-var cssnext = require('postcss-cssnext');
-var postcssFocus = require('postcss-focus');
-var postcssReporter = require('postcss-reporter');
+var cssnext = require('postcss-cssnext');//css语法未来版本的支持
+var postcssFocus = require('postcss-focus');//为每一个设置：hover事件的元素加一个：focus
+var postcssReporter = require('postcss-reporter');//打印 psotcss 信息（语法错误、警告等）
+// 了解postcss和cssnext，可以参考这里http://www.ibm.com/developerworks/cn/web/1604-postcss-css/
 
 var cssModulesIdentName = '[name]__[local]__[hash:base64:5]';
 if (process.env.NODE_ENV === 'production') {
